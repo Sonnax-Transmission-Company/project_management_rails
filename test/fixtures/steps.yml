@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  step: MyString
+  complete: false
+  category: MyString
+  current: false
+  notes: MyText
+
+two:
+  step: MyString
+  complete: false
+  category: MyString
+  current: false
+  notes: MyText
