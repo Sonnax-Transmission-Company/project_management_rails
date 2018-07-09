@@ -1,7 +1,7 @@
 module Api::V1
 	class StepsController < ApplicationController
-		before_action :authenticate_user
-		
+		before_action :authenticate_user, only: [:create, :update, :destroy]
+
 		def create
 			@step = Step.create(step_params)
 			render json: @step

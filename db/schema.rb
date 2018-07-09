@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20180703141945) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "projects", force: :cascade do |t|
     t.string "title"
     t.integer "priority"
@@ -27,7 +30,7 @@ ActiveRecord::Schema.define(version: 20180703141945) do
   end
 
   create_table "steps", force: :cascade do |t|
-    t.integer "project_id"
+    t.bigint "project_id"
     t.string "step_text"
     t.boolean "complete"
     t.string "category"
