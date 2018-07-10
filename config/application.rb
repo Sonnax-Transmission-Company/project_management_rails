@@ -32,7 +32,7 @@ module ProjectManagement
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'http://10.31.31.101:3003'
+        origins 'http://10.31.31.101:3003', 'https://sonnax-pm-react.herokuapp.com'
         resource '*', :headers => :any, :methods => [:get, :post, :put, :delete, :options]
       end
     end
