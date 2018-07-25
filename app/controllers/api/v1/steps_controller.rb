@@ -21,11 +21,11 @@ module Api::V1
 		end
 		def current
 			@steps = Step.where(current: true).where(complete: false)
-			render json: @steps
+			render json: @steps, include: ['project']
 		end
 		def complete
 			@steps = Step.where(complete: true).order('updated_at desc').limit(10)
-			render json: @steps
+			render json: @steps, include: ['project']
 		end
 		def index
 			@steps = Step.order("order asc")
